@@ -3,6 +3,7 @@ const Users = require('./users-model.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+
 function generateToken(user) {
   console.log(user)
 const payload = {

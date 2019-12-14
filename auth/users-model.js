@@ -1,13 +1,13 @@
-const db = require('../database/migrations.js');
+const db = require('../database/dbConfig.js');
 
 function insert(user){
-return db('user')
+return db('users')
 .insert(user, 'id')
 .then(([id])=> id);
 };
 
 function findBy(where){
-    return db('user')
+    return db('users')
     .where(where)
 }
 
@@ -18,7 +18,7 @@ function findByUsername(username){
 };
 
 function find(){
-    return db('user');
+    return db('users');
 }
 
 module.exports= {
